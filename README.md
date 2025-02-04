@@ -1,7 +1,7 @@
 <h1 align="center">✅ ToDo List Web App</h1>
 
 <p align="center">
-  <img src="./images/banner.jpg" alt="ToDo List App">
+  <img src="./ToDoWebApp/wwwroot/images/README/banner.jpg" alt="ToDo List App">
 </p>
 
 <p align="center">
@@ -43,8 +43,8 @@
 ## 👨‍💻 Разработчики
 <table>
     <tr>
-      <td><b><img src="./images/Yaroslav.jpg"></b></td>
-      <td><b><img src="./images/Alexey.jpg"></b></td>
+      <td><b><img src="./ToDoWebApp/wwwroot/images/README/Yaroslav.jpg"></b></td>
+      <td><b><img src="./ToDoWebApp/wwwroot/images/README/Alexey.jpg"></b></td>
     </tr>
     <tr>
       <td>Yaroslav</td>
@@ -56,7 +56,7 @@
 
 ## 📷 Скриншоты
 <p align="left">
-  <img src="./images/banner.jpg" width="45%">
+  <img src="./ToDoWebApp/wwwroot/images/README/banner.jpg" width="45%">
 </p>
 
 ---
