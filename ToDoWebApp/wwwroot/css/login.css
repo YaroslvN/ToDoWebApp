@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+main {
+    background: url(../images/Register/Fon.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px
+}
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+.login-box {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+ 
+.login-image { 
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.login-image img { 
+    max-width: 100%; 
+    position: relative; 
+    top: 90px; 
+    height: auto; 
+    border-radius: 10px; 
+} 
+ 
+ 
+ 
+ 
+ 
+.login-form { 
+    flex: 1; 
+    padding: 145px 0; 
+    max-width: 560px; 
+} 
+ 
+.login-form h2 { 
+    font-size: 36px; 
+    color: #333; 
+    margin-bottom: 20px; 
+} 
+ 
+.input-group { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 15px; 
+} 
+ 
+.input-group label { 
+    font-size: 14px; 
+    margin-bottom: 5px; 
+    color: #555; 
+} 
+ 
+.input-group input { 
+    width: 100%; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 16px; 
+    height: 60px; 
+    padding: 10px; 
+    padding-left: 45px; 
+} 
+ 
+.input-group input:focus { 
+    border-color: #4B46AF; 
+    outline: none; 
+} 
+ 
+.input-wrapper { 
+    position: relative; 
+    width: 100%; 
+} 
+ 
+.input-wrapper .icon { 
+    position: absolute; 
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 20px; 
+    height: 20px; 
+    pointer-events: none; 
+} 
+ 
+.checkbox-group { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+} 
+ 
+.checkbox-group input { 
+    margin-right: 8px; 
+    accent-color: #f8a61c; 
+} 
+ 
+.checkbox-group label { 
+    font-size: 14px; 
+    color: #555; 
+} 
+ 
+.btn-register { 
+    position: relative; 
+    width: 100%; 
+    background-color: #3330c9; 
+    color: white; 
+    padding: 12px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background 0.3s ease-in-out; 
+    overflow: hidden; 
+} 
+ 
+.btn-register::after { 
+    content: ""; 
+    position: absolute; 
+    inset: -5px; 
+    background: transparent; 
+    pointer-events: none; 
+} 
+ 
+.btn-register:hover { 
+    background-color: #3f37e5; 
+} 
+ 
+.btn-register:not(:hover) { 
+    transition-delay: 0.1s; 
+} 
+ 
+.btn-register:active { 
+    background-color: #152386; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+} 
+ 
+ 
+ 
+ 
+ 
+.login-fot-block { 
+    display: flex; 
+    align-items: center; 
+    justify-self: start; 
+    margin-top: 67px; 
+    height: 28px; 
+    width: 300px; 
+} 
+ 
+.or-Login { 
+    font-size: 16px; 
+    line-height: 19.5px; 
+    width: 40%; 
+} 
+ 
+.login-connect { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 100%; 
+    width: 60%; 
+} 
+ 
+.social-button { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    background-size: contain; 
+    background-position: center; 
+} 
+ 
+#google-button { 
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Google_Logo.svg/48px-Google_Logo.svg.png') no-repeat center center; 
+} 
+ 
+#telegram-button { 
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_logo.svg/1200px-Telegram_2019_logo.svg.png') no-repeat center center; 
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+.login-link { 
+    text-align: center; 
+    display: flex; 
+    justify-content: start; 
+    margin-top: 15px; 
+    font-size: 14px; 
+} 
+ 
+.login-link a { 
+    color: #f8a61c; 
+    text-decoration: none; 
+    margin-left: 5px; 
+    font-weight: bold; 
+} 
+ 
+.login-link a:hover { 
+    text-decoration: underline; 
+} 
+ 
+ 
+@media (max-width: 900px) { 
+    .login-box { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+ 
+    .login-image {
+        display: none; 
+    } 
+ 
+    .login-form { 
+        width: 100%; 
+    } 
+} 
+ 
+@media (max-width: 900px) { 
+    .login-form{ 
+        padding: 45px 0; 
+    } 
+}
