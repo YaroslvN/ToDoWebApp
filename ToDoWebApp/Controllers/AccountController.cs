@@ -11,8 +11,22 @@ namespace ToDoWebApp.Controllers
 
         }
 
+        [HttpGet]
         public IActionResult Register()
         {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Register(string Username, string Email, string Password, string ConfirmPassword)
+        {
+            User user = new User()
+            {
+                Name = Username,
+                Email = Email,
+                PasswordHash = Password
+            };
             return View();
         }
 
