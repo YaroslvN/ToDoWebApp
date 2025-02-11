@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #007bff;
+            color: white;
+        }
+
+        .search-bar {
+            padding: 8px;
+            width: 200px;
+        }
+
+        .container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+            .sidebar ul {
+                list-style: none;
+            }
+
+                .sidebar ul li {
+                    margin: 15px 0;
+                }
+
+                    .sidebar ul li a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .todo-container ul {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .todo-container ul li {
+                margin: 10px 0;
+                padding: 10px;
+                background: #e9ecef;
+                border-radius: 3px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        .add-task {
+            margin-top: 10px;
+        }
+
+            .add-task input {
+                padding: 5px;
+                width: 80%;
+            }
+
+            .add-task button {
+                padding: 5px 10px;
+                background: #28a745;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+    </style>
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskList = document.getElementById("taskList");
+            if (taskInput.value.trim() !== "") {
+                let newTask = document.createElement("li");
+                newTask.innerHTML = `${taskInput.value} <button onclick="removeTask(this)">Удалить</button>`;
+                taskList.appendChild(newTask);
+                taskInput.value = "";
+            }
+        }
+        function removeTask(button) {
+            button.parentElement.remove();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>TODO List</h1>
+        <input type="text" class="search-bar" placeholder="Поиск задач...">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Меню</h3>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Мои задачи</a></li>
+                <li><a href="#">Настройки</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="todo-container">
+                <h2>Мои задачи</h2>
+                <ul id="taskList">
+                    <li>Купить продукты <button onclick="removeTask(this)">Удалить</button></li>
+                    <li>Подготовить отчет <button onclick="removeTask(this)">Удалить</button></li>
+                    <li>Позвонить клиенту <button onclick="removeTask(this)">Удалить</button></li>
+                </ul>
+                <div class="add-task">
+                    <input type="text" id="taskInput" placeholder="Добавить новую задачу...">
+                    <button onclick="addTask()">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

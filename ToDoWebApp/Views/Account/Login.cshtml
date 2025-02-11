@@ -9,7 +9,7 @@
                         <span class="icon">
                             <img src="../images/Login/name.png" alt="Name icon">
                         </span>
-                        <input type="text" id="username" class="input-username" placeholder="Enter Username">
+                        <input type="text" id="username" name="Username" class="input-username" placeholder="Enter Username">
                     </div>
                 </div>
                 <div class="input-group">
@@ -18,7 +18,7 @@
                         <span class="icon">
                             <img src="../images/Login/pass.png" alt="Pass icon">
                         </span>
-                        <input type="password" class="input-pass" autocomplete="off" id="password"
+                        <input type="password" name="Password" class="input-pass" autocomplete="off" id="password"
                             placeholder="Enter Password">
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <p class="login-link">Don’t have an account? <a href="#">Create One</a></p>
+            <p class="login-link">Don’t have an account? <a href="@Url.Action("Register", "Account")">Create One</a></p>
         </div>
         <div class="login-image">
             <img src="../images/Login/ImgLog.png" alt="illustration login">
